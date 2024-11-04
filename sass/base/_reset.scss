@@ -1,0 +1,43 @@
+// Сброс базовых отступов и паддингов
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Базовые стили для медиа
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Списки без отступов
+ul,
+ol {
+  list-style: none;
+}
+
+// Кнопки и формы по умолчанию
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+// Ссылки без подчеркивания
+a {
+  text-decoration: none;
+}
+
+// Убираем дефолтный курсив
+address {
+  font-style: normal;
+}

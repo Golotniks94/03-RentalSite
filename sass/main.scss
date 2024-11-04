@@ -1,0 +1,30 @@
+// Base styles
+@import './base/reset';
+@import './base/typography';
+@import './base/variables';
+@import './base/common';
+
+// Components
+@import './components/buttons';
+@import './components/card';
+@import './components/tabs';
+@import './components/form';
+@import './components/slider';
+@import './components/modal';
+
+// Layout
+@import './layout/container';
+@import './layout/header';
+@import './layout/hero';
+@import './layout/partners';
+@import './layout/properties';
+@import './layout/features';
+@import './layout/reviews';
+@import './layout/subscribe';
+@import './layout/footer';
+
+// Utilities
+@import './utils/functions';
+@import './utils/placeholders';
+@import './utils/mixins';
+@import './utils/hidden';
