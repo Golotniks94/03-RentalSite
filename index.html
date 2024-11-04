@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🏡RentalSite</title>
+    <title>🏡 RentalSite</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
@@ -22,12 +22,13 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="container">
+      <div class="header__container container">
         <!-- Logo -->
-        <a href="/" class="header__logo" aria-label="Home"></a>
-        <img src="./img/logo.png" alt="Company Logo" />
+        <a href="/" class="header__logo" aria-label="Home">
+          <img src="./img/logo.png" alt="Company Logo" />
+        </a>
         <!-- Navigation -->
-        <nav class="header__navigation" aria-label="main-navigation">
+        <nav class="header__navigation" aria-label="Main navigation">
           <ul class="header__site-nav site-nav">
             <li class="site-nav__item">
               <a href="/" class="site-nav__link">Home</a>
@@ -55,7 +56,7 @@
     <main>
       <!-- HERO -->
       <section class="hero" aria-labelledby="hero__heading">
-        <div class="container">
+        <div class="hero__container container">
           <h1 id="hero__heading" class="hero__title">
             Find the perfect place to stay with your family
           </h1>
@@ -71,43 +72,23 @@
 
       <!-- Partners -->
       <section class="partners" aria-labelledby="partners__heading">
-        <div class="container">
+        <div class="partners__container container">
           <h2 id="partners__heading" class="partners__title">Our Partners</h2>
           <ul class="partners__logos">
             <li class="partners__logo-item">
-              <img
-                src="./img/logo1.png"
-                alt="Logo of Company 1"
-                class="partners__logo"
-              />
+              <img src="./img/logo1.png" alt="Logo of Company 1" />
             </li>
             <li class="partners__logo-item">
-              <img
-                src="./img/logo2.png"
-                alt="Logo of Company 2"
-                class="partners__logo"
-              />
+              <img src="./img/logo2.png" alt="Logo of Company 2" />
             </li>
             <li class="partners__logo-item">
-              <img
-                src="./img/logo3.png"
-                alt="Logo of Company 3"
-                class="partners__logo"
-              />
+              <img src="./img/logo3.png" alt="Logo of Company 3" />
             </li>
             <li class="partners__logo-item">
-              <img
-                src="./img/logo4.png"
-                alt="Logo of Company 4"
-                class="partners__logo"
-              />
+              <img src="./img/logo4.png" alt="Logo of Company 4" />
             </li>
             <li class="partners__logo-item">
-              <img
-                src="./img/logo5.png"
-                alt="Logo of Company 5"
-                class="partners__logo"
-              />
+              <img src="./img/logo5.png" alt="Logo of Company 5" />
             </li>
           </ul>
         </div>
@@ -119,13 +100,13 @@
         class="properties"
         aria-labelledby="properties__heading"
       >
-        <div class="container">
+        <div class="properties__container container">
           <h2 id="properties__heading" class="properties__title">
             Popular Properties
           </h2>
           <ul class="properties__grid">
             <!-- Property Card -->
-            <li class="properties__card property-card">
+            <li class="property-card">
               <img
                 src="./img/home1.jpg"
                 alt="Capital Hill Residence"
@@ -136,29 +117,7 @@
               <p class="property-card__price">$5527.00</p>
               <a href="#" class="property-card__link">View Details</a>
             </li>
-            <li class="properties__card property-card">
-              <img
-                src="./img/home2.jpg"
-                alt="Picket Fence Realty"
-                class="property-card__image"
-              />
-              <h3 class="property-card__title">Picket Fence Realty</h3>
-              <p class="property-card__location">East London</p>
-              <p class="property-card__price">$6727.00</p>
-              <a href="#" class="property-card__link">View Details</a>
-            </li>
-            <li class="properties__card property-card">
-              <img
-                src="./img/home3.jpg"
-                alt="Banyon Tree Realty"
-                class="property-card__image"
-              />
-              <h3 class="property-card__title">Banyon Tree Realty</h3>
-              <p class="property-card__location">East London</p>
-              <p class="property-card__price">$4327.00</p>
-              <a href="#" class="property-card__link">View Details</a>
-            </li>
-            <!-- Repeat for each property -->
+            <!-- Repeat other property cards here -->
           </ul>
         </div>
       </section>
@@ -168,7 +127,7 @@
         class="featured-properties"
         aria-labelledby="featured-properties__heading"
       >
-        <div class="container">
+        <div class="featured-properties__container container">
           <header class="featured-properties__header">
             <h2
               id="featured-properties__heading"
@@ -197,10 +156,6 @@
             <li class="featured-properties__feature">
               High-Quality Construction
             </li>
-            <li class="featured-properties__feature">Eco-friendly Materials</li>
-            <li class="featured-properties__feature">Modern Amenities</li>
-            <li class="featured-properties__feature">Competitive Pricing</li>
-            <li class="featured-properties__feature">Customer Support</li>
           </ul>
         </div>
       </section>
@@ -210,12 +165,12 @@
         class="customer-reviews"
         aria-labelledby="customer-reviews__heading"
       >
-        <div class="container">
+        <div class="customer-reviews__container container">
           <h2 id="customer-reviews__heading" class="customer-reviews__title">
             What Our Valuable Customers Say
           </h2>
-          <ul class="customer-reviews__list reviews-list">
-            <li class="reviews-list__item review-item">
+          <ul class="reviews-list">
+            <li class="review-item">
               <figure class="review-item__image-wrapper">
                 <img
                   src="./img/foto1.jpg"
@@ -223,50 +178,30 @@
                   class="review-item__image"
                 />
                 <figcaption class="review-item__caption">
-                  Justin Lee, Products Designer at Ito
+                  Justin Lee, Product Designer
                 </figcaption>
               </figure>
               <blockquote class="review-item__text">
                 <p>
                   A good real estate agent doesn’t disappear once the closing is
-                  signed. Buying a bigger home doesn’t necessarily mean spending
-                  more money.
+                  signed.
                 </p>
               </blockquote>
             </li>
-            <li class="reviews-list__item review-item">
-              <figure class="review-item__image-wrapper">
-                <img
-                  src="./img/foto2.jpg"
-                  alt="Angel Cathe"
-                  class="review-item__image"
-                />
-                <figcaption class="review-item__caption">
-                  Angel Cathe, Products Designer at Ito
-                </figcaption>
-              </figure>
-              <blockquote class="review-item__text">
-                <p>
-                  Buying a bigger home doesn’t necessarily mean spending more
-                  money. Been there. Done that. Sold. Bought. Bringing it all
-                  together.
-                </p>
-              </blockquote>
-            </li>
+            <!-- Repeat for other reviews -->
           </ul>
         </div>
       </section>
 
-      <!-- Listing Promotion -->
+      <!-- Subscribe -->
       <section class="subscribe" aria-labelledby="subscribe__heading">
-        <div class="container">
+        <div class="subscribe__container container">
           <h2 id="subscribe__heading" class="subscribe__title">
             Get Your Home Listed as an Owner
           </h2>
           <p class="subscribe__description">
             Here is a list of the greatest real estate company slogans of all
-            time. These catchy slogans are followed by the greatest real estate
-            listings.
+            time.
           </p>
           <form action="#" method="post" class="subscribe__form">
             <label for="email" class="subscribe__label">
@@ -288,7 +223,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container">
+      <div class="footer__container container">
         <div class="footer__top">
           <a href="/" class="footer__logo" aria-label="Home">
             <img src="./img/logo.png" alt="Company Logo" />
@@ -297,7 +232,7 @@
             Contrary to popular belief, it is not simply random text. It has
             meaning.
           </p>
-          <ul class="footer__social-links social-links">
+          <ul class="social-links">
             <li class="social-links__item">
               <a href="#" class="social-links__link">
                 <svg class="social-links__icon">
@@ -305,90 +240,17 @@
                 </svg>
               </a>
             </li>
-            <li class="social-links__item">
-              <a href="#" class="social-links__link">
-                <svg class="social-links__icon">
-                  <use href="./img/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-links__item">
-              <a href="#" class="social-links__link">
-                <svg class="social-links__icon">
-                  <use href="./img/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-links__item">
-              <a href="#" class="social-links__link">
-                <svg class="social-links__icon">
-                  <use href="./img/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-links__item">
-              <a href="#" class="social-links__link">
-                <svg class="social-links__icon">
-                  <use href="./img/sprite.svg#icon-youtube"></use>
-                </svg>
-              </a>
-            </li>
           </ul>
         </div>
 
-        <div class="footer__links footer-links">
+        <div class="footer-links">
           <div class="footer-links__section">
             <h3 class="footer-links__title">About</h3>
             <ul class="footer-links__list">
               <li class="footer-links__item">
                 <a href="#" class="footer-links__link">Company</a>
               </li>
-              <li class="footer-links__item">
-                <a href="#" class="footer-links__link">Team</a>
-              </li>
-              <li class="footer-links__item">
-                <a href="#" class="footer-links__link">Career</a>
-              </li>
-              <li class="footer-links__item">
-                <a href="#" class="footer-links__link">Blogs</a>
-              </li>
             </ul>
-          </div>
-          <div class="footer-links__section">
-            <h3 class="footer-links__title">Products</h3>
-            <ul class="footer-links__list">
-              <li class="footer-links__item">
-                <a href="#" class="footer-links__link">E-Books</a>
-              </li>
-              <li class="footer-links__item">
-                <a href="#" class="footer-links__link">Presentations</a>
-              </li>
-              <li class="footer-links__item">
-                <a href="#" class="footer-links__link">Management</a>
-              </li>
-              <li class="footer-links__item">
-                <a href="#" class="footer-links__link">Dashboard</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-links__section">
-            <h3 class="footer-links__title">Contact</h3>
-            <address class="footer-links__address">
-              <p>
-                Country Delivery
-                <br />
-                Counter Beach Post
-              </p>
-              <p>
-                <a href="http://www.itobd.com" class="footer-links__link">
-                  www.itobd.com
-                </a>
-                <br />
-                <a href="tel:+880176565655" class="footer-links__link">
-                  +880176565655
-                </a>
-              </p>
-            </address>
           </div>
         </div>
 
