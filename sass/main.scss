@@ -1,19 +1,15 @@
 // Base styles
-@import './base/reset';
-@import './base/typography';
-@import './base/variables';
 @import './base/common';
+@import './base/reset';
 
 // Components
-@import './components/buttons';
-@import './components/card';
-@import './components/tabs';
-@import './components/form';
-@import './components/slider';
+@import './components/btn';
+@import './components/container';
 @import './components/modal';
+@import './components/pre-title';
+@import './components/title';
 
 // Layout
-@import './layout/container';
 @import './layout/header';
 @import './layout/hero';
 @import './layout/partners';
@@ -24,7 +20,7 @@
 @import './layout/footer';
 
 // Utilities
-@import './utils/functions';
-@import './utils/placeholders';
-@import './utils/mixins';
 @import './utils/hidden';
+@import './utils/mixins';
+@import './utils/placeholders';
+@import './utils/vars';
