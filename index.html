@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🏡 RentalSite</title>
+    <title>🏡RentalSite</title>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
@@ -22,13 +23,14 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="header__container container">
+      <div class="container">
         <!-- Logo -->
         <a href="/" class="header__logo" aria-label="Home">
           <img src="./img/logo.png" alt="Company Logo" />
         </a>
+
         <!-- Navigation -->
-        <nav class="header__navigation" aria-label="Main navigation">
+        <nav class="header__navigation" aria-label="main-navigation">
           <ul class="header__site-nav site-nav">
             <li class="site-nav__item">
               <a href="/" class="site-nav__link">Home</a>
@@ -43,6 +45,7 @@
               <a href="/" class="site-nav__link">Blog</a>
             </li>
           </ul>
+
           <ul class="header__auth-nav auth-nav">
             <li class="auth-nav__item">
               <a href="/" class="auth-nav__link">Contact Us</a>
@@ -56,7 +59,7 @@
     <main>
       <!-- HERO -->
       <section class="hero" aria-labelledby="hero__heading">
-        <div class="hero__container container">
+        <div class="container">
           <h1 id="hero__heading" class="hero__title">
             Find the perfect place to stay with your family
           </h1>
@@ -72,23 +75,43 @@
 
       <!-- Partners -->
       <section class="partners" aria-labelledby="partners__heading">
-        <div class="partners__container container">
+        <div class="container">
           <h2 id="partners__heading" class="partners__title">Our Partners</h2>
           <ul class="partners__logos">
             <li class="partners__logo-item">
-              <img src="./img/logo1.png" alt="Logo of Company 1" />
+              <img
+                src="./img/logo1.png"
+                alt="Logo of Company 1"
+                class="partners__logo"
+              />
             </li>
             <li class="partners__logo-item">
-              <img src="./img/logo2.png" alt="Logo of Company 2" />
+              <img
+                src="./img/logo2.png"
+                alt="Logo of Company 2"
+                class="partners__logo"
+              />
             </li>
             <li class="partners__logo-item">
-              <img src="./img/logo3.png" alt="Logo of Company 3" />
+              <img
+                src="./img/logo3.png"
+                alt="Logo of Company 3"
+                class="partners__logo"
+              />
             </li>
             <li class="partners__logo-item">
-              <img src="./img/logo4.png" alt="Logo of Company 4" />
+              <img
+                src="./img/logo4.png"
+                alt="Logo of Company 4"
+                class="partners__logo"
+              />
             </li>
             <li class="partners__logo-item">
-              <img src="./img/logo5.png" alt="Logo of Company 5" />
+              <img
+                src="./img/logo5.png"
+                alt="Logo of Company 5"
+                class="partners__logo"
+              />
             </li>
           </ul>
         </div>
@@ -100,13 +123,13 @@
         class="properties"
         aria-labelledby="properties__heading"
       >
-        <div class="properties__container container">
+        <div class="container">
           <h2 id="properties__heading" class="properties__title">
             Popular Properties
           </h2>
           <ul class="properties__grid">
             <!-- Property Card -->
-            <li class="property-card">
+            <li class="properties__card property-card">
               <img
                 src="./img/home1.jpg"
                 alt="Capital Hill Residence"
@@ -117,7 +140,30 @@
               <p class="property-card__price">$5527.00</p>
               <a href="#" class="property-card__link">View Details</a>
             </li>
-            <!-- Repeat other property cards here -->
+
+            <li class="properties__card property-card">
+              <img
+                src="./img/home2.jpg"
+                alt="Picket Fence Realty"
+                class="property-card__image"
+              />
+              <h3 class="property-card__title">Picket Fence Realty</h3>
+              <p class="property-card__location">East London</p>
+              <p class="property-card__price">$6727.00</p>
+              <a href="#" class="property-card__link">View Details</a>
+            </li>
+
+            <li class="properties__card property-card">
+              <img
+                src="./img/home3.jpg"
+                alt="Banyon Tree Realty"
+                class="property-card__image"
+              />
+              <h3 class="property-card__title">Banyon Tree Realty</h3>
+              <p class="property-card__location">East London</p>
+              <p class="property-card__price">$4327.00</p>
+              <a href="#" class="property-card__link">View Details</a>
+            </li>
           </ul>
         </div>
       </section>
@@ -127,7 +173,7 @@
         class="featured-properties"
         aria-labelledby="featured-properties__heading"
       >
-        <div class="featured-properties__container container">
+        <div class="container">
           <header class="featured-properties__header">
             <h2
               id="featured-properties__heading"
@@ -156,6 +202,10 @@
             <li class="featured-properties__feature">
               High-Quality Construction
             </li>
+            <li class="featured-properties__feature">Eco-friendly Materials</li>
+            <li class="featured-properties__feature">Modern Amenities</li>
+            <li class="featured-properties__feature">Competitive Pricing</li>
+            <li class="featured-properties__feature">Customer Support</li>
           </ul>
         </div>
       </section>
@@ -165,12 +215,12 @@
         class="customer-reviews"
         aria-labelledby="customer-reviews__heading"
       >
-        <div class="customer-reviews__container container">
+        <div class="container">
           <h2 id="customer-reviews__heading" class="customer-reviews__title">
             What Our Valuable Customers Say
           </h2>
-          <ul class="reviews-list">
-            <li class="review-item">
+          <ul class="customer-reviews__list reviews-list">
+            <li class="reviews-list__item review-item">
               <figure class="review-item__image-wrapper">
                 <img
                   src="./img/foto1.jpg"
@@ -178,84 +228,104 @@
                   class="review-item__image"
                 />
                 <figcaption class="review-item__caption">
-                  Justin Lee, Product Designer
+                  <h3>Justin Lee</h3>
+                  <p>Products Designer at Ito</p>
                 </figcaption>
               </figure>
               <blockquote class="review-item__text">
                 <p>
-                  A good real estate agent doesn’t disappear once the closing is
-                  signed.
+                  A good real estate agent doesn’t disappear once the closing IN
+                  signed.Buying a bigger home doesn’t necessarily mean spendi
+                  more money.Been there. Done that. Sold. Bought Bringing It All
+                  Together.
                 </p>
               </blockquote>
             </li>
-            <!-- Repeat for other reviews -->
+            <li class="reviews-list__item review-item">
+              <figure class="review-item__image-wrapper">
+                <img
+                  src="./img/foto2.jpg"
+                  alt="Linda Lee"
+                  class="review-item__image"
+                />
+                <figcaption class="review-item__caption">
+                  <h3>Linda Lee</h3>
+                  <p>Products Designer at Ito</p>
+                </figcaption>
+              </figure>
+              <blockquote class="review-item__text">
+                <p>
+                  A good real estate agent doesn’t disappear once the closing IN
+                  signed.Buying a bigger home doesn’t necessarily mean spendi
+                  more money.Been there. Done that. Sold. Bought be Bringing It
+                  All Together there.
+                </p>
+              </blockquote>
+            </li>
           </ul>
-        </div>
-      </section>
-
-      <!-- Subscribe -->
-      <section class="subscribe" aria-labelledby="subscribe__heading">
-        <div class="subscribe__container container">
-          <h2 id="subscribe__heading" class="subscribe__title">
-            Get Your Home Listed as an Owner
-          </h2>
-          <p class="subscribe__description">
-            Here is a list of the greatest real estate company slogans of all
-            time.
-          </p>
-          <form action="#" method="post" class="subscribe__form">
-            <label for="email" class="subscribe__label">
-              Enter your email address
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="subscribe__input"
-              placeholder="Enter email address"
-              required
-            />
-            <button type="submit" class="subscribe__button">Subscribe</button>
-          </form>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="footer__container container">
-        <div class="footer__top">
-          <a href="/" class="footer__logo" aria-label="Home">
-            <img src="./img/logo.png" alt="Company Logo" />
-          </a>
-          <p class="footer__description">
-            Contrary to popular belief, it is not simply random text. It has
-            meaning.
-          </p>
-          <ul class="social-links">
-            <li class="social-links__item">
-              <a href="#" class="social-links__link">
-                <svg class="social-links__icon">
-                  <use href="./img/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
+      <div class="container">
+        <div class="footer__navigation">
+          <h2 class="visually-hidden">Footer Navigation</h2>
+          <ul class="footer__site-nav site-nav">
+            <li class="site-nav__item">
+              <a href="/" class="site-nav__link">Home</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="#properties" class="site-nav__link">Properties</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="./aboutUs.html" class="site-nav__link">About Us</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="/" class="site-nav__link">Blog</a>
             </li>
           </ul>
         </div>
-
-        <div class="footer-links">
-          <div class="footer-links__section">
-            <h3 class="footer-links__title">About</h3>
-            <ul class="footer-links__list">
-              <li class="footer-links__item">
-                <a href="#" class="footer-links__link">Company</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="footer__copyright">
-          &copy; 2024 RentalSite. All rights reserved.
+        <ul class="footer__social social">
+          <li class="social__item">
+            <a href="/" class="social__link" aria-label="facebook">
+              <svg class="social__icon" width="32" height="32">
+                <use href="./img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="/" class="social__link" aria-label="instagram">
+              <svg class="social__icon" width="32" height="32">
+                <use href="./img/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="/" class="social__link" aria-label="linkedin">
+              <svg class="social__icon" width="32" height="32">
+                <use href="./img/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="/" class="social__link" aria-label="twitter">
+              <svg class="social__icon" width="32" height="32">
+                <use href="./img/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="/" class="social__link" aria-label="youtube">
+              <svg class="social__icon" width="32" height="32">
+                <use href="./img/sprite.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p class="footer__text">
+          Copyright &copy; 2023 RentalSite | All rights reserved.
         </p>
       </div>
     </footer>
