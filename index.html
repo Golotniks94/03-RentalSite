@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🏡RentalSite</title>
-
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
@@ -26,7 +25,9 @@
       <div class="container">
         <!-- Logo -->
         <a href="/" class="header__logo" aria-label="Home">
-          <img src="./img/logo.png" alt="Company Logo" />
+          <svg class="logo__icon">
+            <use href="./img/logo.svg"></use>
+          </svg>
         </a>
 
         <!-- Navigation -->
@@ -45,7 +46,6 @@
               <a href="/" class="site-nav__link">Blog</a>
             </li>
           </ul>
-
           <ul class="header__auth-nav auth-nav">
             <li class="auth-nav__item">
               <a href="/" class="auth-nav__link">Contact Us</a>
@@ -67,9 +67,10 @@
             Buying a home is a life-changing experience, so shouldn’t your real
             estate agent be a life changer.
           </p>
-          <figure class="hero__image-wrapper">
+          <picture class="hero__image-wrapper">
+            <source srcset="./img/hero.jpg 1x, ./img/hero-2x.jpg 2x" />
             <img src="./img/hero.jpg" alt="Building" class="hero__image" />
-          </figure>
+          </picture>
         </div>
       </section>
 
@@ -217,52 +218,92 @@
       >
         <div class="container">
           <h2 id="customer-reviews__heading" class="customer-reviews__title">
-            What Our Valuable Customers Say
+            What Our Customers Say
           </h2>
-          <ul class="customer-reviews__list reviews-list">
-            <li class="reviews-list__item review-item">
-              <figure class="review-item__image-wrapper">
+          <ul class="customer-reviews__list">
+            <li class="customer-review">
+              <figure class="customer-review__image-wrapper">
                 <img
                   src="./img/foto1.jpg"
-                  alt="Justin Lee"
-                  class="review-item__image"
+                  alt="Customer photo: Justin Lee"
+                  class="customer-review__image"
                 />
-                <figcaption class="review-item__caption">
+                <figcaption class="customer-review__author">
                   <h3>Justin Lee</h3>
-                  <p>Products Designer at Ito</p>
+                  <p>Product Designer at Ito</p>
                 </figcaption>
               </figure>
-              <blockquote class="review-item__text">
-                <p>
-                  A good real estate agent doesn’t disappear once the closing IN
-                  signed.Buying a bigger home doesn’t necessarily mean spendi
-                  more money.Been there. Done that. Sold. Bought Bringing It All
-                  Together.
-                </p>
+              <blockquote class="customer-review__text">
+                "A good real estate agent doesn’t disappear once the closing is
+                signed. Buying a bigger home doesn’t necessarily mean spending
+                more money. Been there, done that, sold, bought, bringing it all
+                together."
               </blockquote>
             </li>
-            <li class="reviews-list__item review-item">
-              <figure class="review-item__image-wrapper">
+
+            <li class="customer-review">
+              <figure class="customer-review__image-wrapper">
                 <img
                   src="./img/foto2.jpg"
-                  alt="Linda Lee"
-                  class="review-item__image"
+                  alt="Customer photo: Linda Lee"
+                  class="customer-review__image"
                 />
-                <figcaption class="review-item__caption">
+                <figcaption class="customer-review__author">
                   <h3>Linda Lee</h3>
-                  <p>Products Designer at Ito</p>
+                  <p>Product Designer at Ito</p>
                 </figcaption>
               </figure>
-              <blockquote class="review-item__text">
-                <p>
-                  A good real estate agent doesn’t disappear once the closing IN
-                  signed.Buying a bigger home doesn’t necessarily mean spendi
-                  more money.Been there. Done that. Sold. Bought be Bringing It
-                  All Together there.
-                </p>
+              <blockquote class="customer-review__text">
+                "A great real estate agent offers exceptional support even after
+                the sale. I’ve found my ideal home with the help of RentalSite!"
               </blockquote>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <!-- Contact Us -->
+      <section class="contact-us" aria-labelledby="contact-us__heading">
+        <div class="container">
+          <h2 id="contact-us__heading" class="contact-us__title">
+            Get in Touch with Us
+          </h2>
+          <p class="contact-us__description">
+            Have questions or need assistance? Our team is here to help you find
+            your perfect home.
+          </p>
+          <form class="contact-us__form" action="#" method="POST">
+            <label for="name" class="contact-us__label">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="contact-us__input"
+              required
+            />
+
+            <label for="email" class="contact-us__label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="contact-us__input"
+              required
+            />
+
+            <label for="message" class="contact-us__label">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              class="contact-us__textarea"
+              rows="4"
+              required
+            ></textarea>
+
+            <button type="submit" class="contact-us__button">
+              Send Message
+            </button>
+          </form>
         </div>
       </section>
     </main>
@@ -270,62 +311,87 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="footer__navigation">
-          <h2 class="visually-hidden">Footer Navigation</h2>
-          <ul class="footer__site-nav site-nav">
-            <li class="site-nav__item">
-              <a href="/" class="site-nav__link">Home</a>
+        <h2 class="visually-hidden">Footer</h2>
+
+        <!-- Footer Navigation -->
+        <nav class="footer__navigation" aria-label="footer-navigation">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="/" class="footer__nav-link">Home</a>
             </li>
-            <li class="site-nav__item">
-              <a href="#properties" class="site-nav__link">Properties</a>
+            <li class="footer__nav-item">
+              <a href="#properties" class="footer__nav-link">Properties</a>
             </li>
-            <li class="site-nav__item">
-              <a href="./aboutUs.html" class="site-nav__link">About Us</a>
+            <li class="footer__nav-item">
+              <a href="./aboutUs.html" class="footer__nav-link">About Us</a>
             </li>
-            <li class="site-nav__item">
-              <a href="/" class="site-nav__link">Blog</a>
+            <li class="footer__nav-item">
+              <a href="/" class="footer__nav-link">Blog</a>
             </li>
           </ul>
-        </div>
-        <ul class="footer__social social">
-          <li class="social__item">
-            <a href="/" class="social__link" aria-label="facebook">
-              <svg class="social__icon" width="32" height="32">
+        </nav>
+
+        <!-- Social Media Links with SVG Sprite Icons -->
+        <ul class="footer__socials">
+          <li class="footer__social-item">
+            <a
+              href="https://facebook.com"
+              aria-label="Facebook"
+              class="footer__social-link"
+            >
+              <svg class="footer__social-icon" width="32" height="32">
                 <use href="./img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
-          <li class="social__item">
-            <a href="/" class="social__link" aria-label="instagram">
-              <svg class="social__icon" width="32" height="32">
+          <li class="footer__social-item">
+            <a
+              href="https://instagram.com"
+              aria-label="Instagram"
+              class="footer__social-link"
+            >
+              <svg class="footer__social-icon" width="32" height="32">
                 <use href="./img/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
-          <li class="social__item">
-            <a href="/" class="social__link" aria-label="linkedin">
-              <svg class="social__icon" width="32" height="32">
+          <li class="footer__social-item">
+            <a
+              href="https://linkedin.com"
+              aria-label="LinkedIn"
+              class="footer__social-link"
+            >
+              <svg class="footer__social-icon" width="32" height="32">
                 <use href="./img/sprite.svg#icon-linkedin"></use>
               </svg>
             </a>
           </li>
-          <li class="social__item">
-            <a href="/" class="social__link" aria-label="twitter">
-              <svg class="social__icon" width="32" height="32">
+          <li class="footer__social-item">
+            <a
+              href="https://twitter.com"
+              aria-label="Twitter"
+              class="footer__social-link"
+            >
+              <svg class="footer__social-icon" width="32" height="32">
                 <use href="./img/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
-          <li class="social__item">
-            <a href="/" class="social__link" aria-label="youtube">
-              <svg class="social__icon" width="32" height="32">
+          <li class="footer__social-item">
+            <a
+              href="https://youtube.com"
+              aria-label="YouTube"
+              class="footer__social-link"
+            >
+              <svg class="footer__social-icon" width="32" height="32">
                 <use href="./img/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
         </ul>
-        <p class="footer__text">
-          Copyright &copy; 2023 RentalSite | All rights reserved.
+
+        <p class="footer__copyright">
+          &copy; 2024 RentalSite. All rights reserved.
         </p>
       </div>
     </footer>
