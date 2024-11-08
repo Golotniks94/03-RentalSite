@@ -25,13 +25,17 @@
       <div class="container">
         <!-- Logo -->
         <a href="/" class="header__logo" aria-label="Home">
-          <svg class="logo__icon">
+          <svg class="header__logo-icon">
             <use href="./img/logo.svg"></use>
           </svg>
         </a>
 
         <!-- Navigation -->
-        <nav class="header__navigation" aria-label="main-navigation">
+        <nav
+          class="header__navigation"
+          aria-label="main-navigation"
+          role="navigation"
+        >
           <ul class="header__site-nav site-nav">
             <li class="site-nav__item">
               <a href="/" class="site-nav__link">Home</a>
@@ -309,90 +313,94 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
-        <h2 class="visually-hidden">Footer</h2>
+        <!-- Logo and Description -->
+        <section class="footer__logo-section">
+          <a href="/" class="footer__logo" aria-label="Home">
+            <svg class="footer__logo-icon">
+              <use href="./img/logo.svg"></use>
+            </svg>
+          </a>
+          <p class="footer__text">
+            Contrary to popular is not simply random text. It has
+          </p>
+        </section>
 
-        <!-- Footer Navigation -->
-        <nav class="footer__navigation" aria-label="footer-navigation">
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item">
-              <a href="/" class="footer__nav-link">Home</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="#properties" class="footer__nav-link">Properties</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="./aboutUs.html" class="footer__nav-link">About Us</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="/" class="footer__nav-link">Blog</a>
-            </li>
-          </ul>
-        </nav>
+        <!-- Footer Links -->
+        <section class="footer__columns">
+          <!-- About Section -->
+          <div class="footer__column">
+            <h3 class="footer__title">About</h3>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Company</a></li>
+              <li><a href="#" class="footer__link">Team</a></li>
+              <li><a href="#" class="footer__link">Career</a></li>
+              <li><a href="#" class="footer__link">Blogs</a></li>
+            </ul>
+          </div>
 
-        <!-- Social Media Links with SVG Sprite Icons -->
-        <ul class="footer__socials">
-          <li class="footer__social-item">
-            <a
-              href="https://facebook.com"
-              aria-label="Facebook"
-              class="footer__social-link"
-            >
-              <svg class="footer__social-icon" width="32" height="32">
-                <use href="./img/sprite.svg#icon-facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a
-              href="https://instagram.com"
-              aria-label="Instagram"
-              class="footer__social-link"
-            >
-              <svg class="footer__social-icon" width="32" height="32">
-                <use href="./img/sprite.svg#icon-instagram"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a
-              href="https://linkedin.com"
-              aria-label="LinkedIn"
-              class="footer__social-link"
-            >
-              <svg class="footer__social-icon" width="32" height="32">
-                <use href="./img/sprite.svg#icon-linkedin"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a
-              href="https://twitter.com"
-              aria-label="Twitter"
-              class="footer__social-link"
-            >
-              <svg class="footer__social-icon" width="32" height="32">
-                <use href="./img/sprite.svg#icon-twitter"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer__social-item">
-            <a
-              href="https://youtube.com"
-              aria-label="YouTube"
-              class="footer__social-link"
-            >
-              <svg class="footer__social-icon" width="32" height="32">
-                <use href="./img/sprite.svg#icon-youtube"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+          <!-- Products Section -->
+          <div class="footer__column">
+            <h3 class="footer__title">Products</h3>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">E-Books</a></li>
+              <li><a href="#" class="footer__link">Presentation</a></li>
+              <li><a href="#" class="footer__link">Management</a></li>
+              <li><a href="#" class="footer__link">Dashboard</a></li>
+            </ul>
+          </div>
 
-        <p class="footer__copyright">
-          &copy; 2024 RentalSite. All rights reserved.
-        </p>
+          <!-- Address Section -->
+          <div class="footer__column">
+            <h3 class="footer__title">Address</h3>
+            <address class="footer__address">
+              <p class="footer__address-item">Country Delivery</p>
+              <p class="footer__address-item">Counter Beach Post</p>
+              <p class="footer__address-item">
+                <a href="http://www.itobd.com" class="footer__link">
+                  www.itobd.com
+                </a>
+              </p>
+              <p class="footer__address-item">+880176565655</p>
+            </address>
+          </div>
+        </section>
+
+        <!-- Social Media Links in Footer -->
+        <section
+          class="footer__social"
+          aria-labelledby="footer__social-heading"
+        >
+          <h2 id="footer__social-heading" class="visually-hidden">
+            Follow us on social media
+          </h2>
+          <a href="#" class="footer__social-link" aria-label="Facebook">
+            <svg class="footer__social-icon">
+              <use href="./img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Instagram">
+            <svg class="footer__social-icon">
+              <use href="./img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="LinkedIn">
+            <svg class="footer__social-icon">
+              <use href="./img/sprite.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Twitter">
+            <svg class="footer__social-icon">
+              <use href="./img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="YouTube">
+            <svg class="footer__social-icon">
+              <use href="./img/sprite.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </section>
       </div>
     </footer>
   </body>
