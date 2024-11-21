@@ -1,51 +1,146 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
 }
 
-img,
-svg {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
   display: block;
-  max-width: 100%;
-  height: auto;
+}
+
+*[hidden] {
+  display: none;
 }
 
 ul,
 ol {
   list-style: none;
-}
-
-button,
-input,
-textarea {
-  font: inherit;
-  color: inherit;
-  background: none;
-  border: none;
+  margin: 0;
   padding: 0;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
-address {
-  font-style: normal;
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
 
 body {
-  font-family: 'Popins', sans-serif;
-}
-
-.list {
-  list-style: none;
-}
-
-.link {
-  text-decoration: none;
+  font-family: "Popins", sans-serif;
 }
 
 .container {
@@ -53,4 +148,4 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-} /*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
