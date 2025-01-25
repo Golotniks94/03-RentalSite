@@ -1,20 +1,22 @@
+@import 'base/vars';
+@import 'base/common';
 @import 'base/reset';
-@import 'base/typography';
-@import 'base/variables';
+
+@import 'components/btn';
+@import 'components/container';
+@import 'components/modal';
+@import 'components/pre-title';
+@import 'components/title';
 
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/grid';
-@import 'layout/containers';
-
-@import 'components/buttons';
-@import 'components/forms';
-@import 'components/cards';
-@import 'components/navigation';
+@import 'layout/hero';
+@import 'layout/partners';
 
 @import 'pages/home';
 @import 'pages/about';
 
-@import 'utilities/spacing';
-@import 'utilities/text';
-@import 'utilities/mixins';
+@import 'utils/hidden';
+@import 'utils/mixins';
+@import 'utils/placeholders';

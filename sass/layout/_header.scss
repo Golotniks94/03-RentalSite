@@ -1,30 +1,80 @@
-// Header layout styles
+@import '../base/vars';
+@import '../utils/mixins';
+
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
   &__logo {
+    flex: 0 0 auto;
+    margin-right: 310px; // Отступ логотипа от навигации
+
+    &__image {
+      display: block;
+    }
   }
 
   &__navigation {
-  }
+    display: flex;
+    gap: 50px; // Отступы между элементами навигации
 
-  &__site-nav {
-  }
+    &__item {
+      list-style: none;
 
-  &__auth-nav {
+      &__link {
+        text-decoration: none;
+        color: $colorPrimary;
+      }
+    }
   }
 }
 
 .site-nav {
-  &__item {
-  }
+  display: flex;
+  gap: 50px; // Отступы между элементами навигации
 
-  &__link {
+  &__item {
+    list-style: none;
+
+    &__link {
+      text-decoration: none;
+      color: $colorPrimary;
+    }
   }
 }
 
 .auth-nav {
-  &__item {
-  }
+  display: flex;
+  gap: 50px; // Отступы между элементами навигации
 
-  &__link {
+  &__item {
+    list-style: none;
+
+    &__link {
+      text-decoration: none;
+      color: $colorPrimary;
+    }
+  }
+}
+
+// Стили для кнопки
+.button {
+  border-radius: 5px;
+  background: rgb(46, 110, 255);
+  position: relative;
+  width: 149px;
+  height: 54px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: rgb(254, 117, 63); // Цвет при наведении
   }
 }

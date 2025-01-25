@@ -1,0 +1,33 @@
+.partners {
+  text-align: center;
+  padding: $spacingLarge 0;
+
+  &__title {
+    font-size: 1.5rem; // 24px
+    font-weight: $fontWeightMedium;
+    color: $colorText;
+    margin-bottom: $spacingLarge;
+  }
+
+  &__logos {
+    @include flexCenter(row, center);
+    gap: $spacingMedium;
+    flex-wrap: wrap;
+
+    &__logo-item {
+      max-width: 150px;
+
+      img {
+        width: 100%;
+        border-radius: $borderRadiusSmall;
+        box-shadow: $boxShadowLight;
+        @include transitionEase();
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: $boxShadowMedium;
+        }
+      }
+    }
+  }
+}

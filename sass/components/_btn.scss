@@ -1,0 +1,27 @@
+.button {
+  font-family: $fontFamilyBase;
+  font-size: $spacingMedium;
+  padding: $spacingSmall $spacingMedium;
+  border-radius: $borderRadiusMedium;
+  transition: all 0.3s ease;
+
+  &--primary {
+    background-color: $colorPrimary;
+    color: $colorTextWhite;
+    box-shadow: $boxShadowLight;
+
+    &:hover {
+      background-color: lighten($colorPrimary, 10%);
+      box-shadow: $boxShadowMedium;
+    }
+  }
+
+  &--secondary {
+    background-color: $colorText;
+    color: $colorTextWhite;
+
+    &:hover {
+      background-color: lighten($colorText, 10%);
+    }
+  }
+}

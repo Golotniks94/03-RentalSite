@@ -1,0 +1,29 @@
+// Colors
+$colorBackground: rgb(229, 229, 229);
+$colorText: rgb(3, 10, 27);
+$colorPrimary: rgb(254, 117, 63);
+$colorTextWhite: rgb(255, 255, 255);
+
+// Fonts
+$fontFamilyBase: 'Poppins', sans-serif;
+$fontWeightNormal: 400;
+$fontWeightMedium: 500;
+$fontWeightBold: 700;
+
+// Breakpoints
+$breakpointMobile: 576px;
+$breakpointTablet: 768px;
+$breakpointDesktop: 1200px;
+
+// Spacing
+$spacingSmall: 8px;
+$spacingMedium: 16px;
+$spacingLarge: 24px;
+
+// Borders
+$borderRadiusSmall: 4px;
+$borderRadiusMedium: 8px;
+
+// Shadows
+$boxShadowLight: 0 2px 4px rgba(0, 0, 0, 0.1);
+$boxShadowMedium: 0 4px 8px rgba(0, 0, 0, 0.15);

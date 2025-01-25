@@ -1,0 +1,26 @@
+.hero {
+  padding: $spacingLarge;
+  background-color: $colorBackground;
+
+  &__title {
+    font-size: 2.5rem; // 40px
+    font-weight: $fontWeightBold;
+    color: $colorText;
+    margin-bottom: $spacingMedium;
+  }
+
+  &__description {
+    font-size: 1.125rem; // 18px
+    font-weight: $fontWeightNormal;
+    color: darken($colorText, 10%);
+    margin-bottom: $spacingLarge;
+  }
+
+  &__image-wrapper {
+    img {
+      width: 100%;
+      border-radius: $borderRadiusMedium;
+      box-shadow: $boxShadowMedium;
+    }
+  }
+}
