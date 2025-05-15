@@ -12,36 +12,41 @@ h4,
 h5,
 h6,
 p,
-figure,
 blockquote,
+figure,
+figcaption,
+pre,
+ul,
+ol,
 dl,
 dd {
   margin: 0;
 }
 
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
+  padding: 0;
   list-style: none;
-}
-
-html:focus-within {
-  scroll-behavior: smooth;
 }
 
 body {
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
-}
-
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
 }
 
 img,
-picture {
-  max-width: 100%;
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 input,
@@ -51,8 +56,25 @@ select {
   font: inherit;
 }
 
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 [hidden] {
   display: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta
-      http-equiv="X-UA-Compatible"
-      content="IE=edge"
-    />
-    <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>🏡RentalSite</title>
+    <meta
+      name="description"
+      content="Find the perfect rental properties for your family. Browse popular listings, view featured properties, and contact us for more information."
+    />
+    <title>RentalSite - Find Your Perfect Rental Property</title>
+    <link
+      rel="icon"
+      href="/favicon.ico"
+      sizes="any"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/apple-touch-icon.png"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
@@ -29,26 +38,24 @@
   </head>
 
   <body>
-    <!-- Header -->
     <header class="header">
       <div class="container">
-        <!-- Navigation -->
         <nav
           class="header__navigation"
           aria-label="main-navigation"
-          role="navigation"
         >
-          <!-- Logo -->
           <a
             href="/"
             class="header__logo"
-            aria-label="Home"
+            aria-label="RentalSite Home"
           >
             <img
               src="./img/logo.png"
               srcset="./img/logo-2x.png 2x, ./img/logo-3x.png 3x"
-              alt="Company Logo"
+              alt="RentalSite Logo"
               class="logo__image"
+              width="100"
+              height="50"
             />
           </a>
           <ul class="header__site-nav site-nav">
@@ -56,6 +63,7 @@
               <a
                 href="/"
                 class="site-nav__link"
+                aria-current="page"
               >
                 Home
               </a>
@@ -78,7 +86,7 @@
             </li>
             <li class="site-nav__item">
               <a
-                href="/"
+                href="/blog"
                 class="site-nav__link"
               >
                 Blog
@@ -89,6 +97,8 @@
                 href="#"
                 class="auth-nav__link"
                 id="contact-us-link"
+                aria-haspopup="dialog"
+                aria-controls="contact-us-modal"
               >
                 Contact Us
               </a>
@@ -98,10 +108,13 @@
       </div>
     </header>
 
-    <!-- Contact Us Modal -->
     <div
       id="contact-us-modal"
       class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+      hidden
     >
       <div class="modal-content">
         <button
@@ -110,14 +123,18 @@
         >
           &times;
         </button>
-        <h2>Contact Us</h2>
-        <form>
+        <h2 id="modal-title">Contact Us</h2>
+        <form
+          action="/submit-contact-form"
+          method="POST"
+        >
           <label for="name">Name:</label>
           <input
             type="text"
             id="name"
             name="name"
             required
+            autocomplete="name"
           />
           <label for="email">Email:</label>
           <input
@@ -125,6 +142,7 @@
             id="email"
             name="email"
             required
+            autocomplete="email"
           />
           <label for="message">Message:</label>
           <textarea
@@ -137,9 +155,7 @@
       </div>
     </div>
 
-    <!-- Main Content -->
     <main>
-      <!-- HERO -->
       <section
         class="hero"
         aria-labelledby="hero__heading"
@@ -152,20 +168,23 @@
             Find the perfect place to stay with your family
           </h1>
           <p class="hero__description">
-            Buying a home is a life-changing experience, so shouldn’t your real estate agent be a life changer.
+            Buying a home is a life-changing experience, so shouldn’t your real
+            estate agent be a life changer.
           </p>
           <picture class="hero__image-wrapper">
             <img
               src="./img/hero.jpg"
               srcset="./img/hero-2x.jpg 2x, ./img/hero-3x.jpg 3x"
-              alt="Building"
+              alt="Modern apartment building facade with large windows"
               class="hero__image"
+              width="600"
+              height="400"
+              loading="lazy"
             />
           </picture>
         </div>
       </section>
 
-      <!-- Partners -->
       <section
         class="partners"
         aria-labelledby="partners__heading"
@@ -183,6 +202,9 @@
                 src="./img/logo1.png"
                 alt="Logo of Company 1"
                 class="partners__logo"
+                width="100"
+                height="50"
+                loading="lazy"
               />
             </li>
             <li class="partners__logo-item">
@@ -190,6 +212,9 @@
                 src="./img/logo2.png"
                 alt="Logo of Company 2"
                 class="partners__logo"
+                width="100"
+                height="50"
+                loading="lazy"
               />
             </li>
             <li class="partners__logo-item">
@@ -197,6 +222,9 @@
                 src="./img/logo3.png"
                 alt="Logo of Company 3"
                 class="partners__logo"
+                width="100"
+                height="50"
+                loading="lazy"
               />
             </li>
             <li class="partners__logo-item">
@@ -204,6 +232,9 @@
                 src="./img/logo4.png"
                 alt="Logo of Company 4"
                 class="partners__logo"
+                width="100"
+                height="50"
+                loading="lazy"
               />
             </li>
             <li class="partners__logo-item">
@@ -211,13 +242,15 @@
                 src="./img/logo5.png"
                 alt="Logo of Company 5"
                 class="partners__logo"
+                width="100"
+                height="50"
+                loading="lazy"
               />
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- Properties -->
       <section
         id="properties"
         class="properties"
@@ -231,113 +264,153 @@
             Popular Properties
           </h2>
           <ul class="properties__grid">
-            <!-- Property Card -->
             <li class="properties__card property-card">
-              <img
-                src="./img/home1.jpg"
-                alt="Capital Hill Residence"
-                class="property-card__image"
-              />
-              <h3 class="property-card__title">Capital Hill Residence</h3>
-              <p class="property-card__location">East London</p>
-              <p class="property-card__price">$5527.00</p>
-              <a
-                href="#"
-                class="property-card__link"
-              >
-                View Details
-              </a>
+              <article>
+                <img
+                  src="./img/home1.jpg"
+                  alt="Exterior view of Capital Hill Residence"
+                  class="property-card__image"
+                  width="300"
+                  height="200"
+                  loading="lazy"
+                />
+                <h3 class="property-card__title">
+                  <a
+                    href="#"
+                    class="property-card__link"
+                    aria-label="View Details for Capital Hill Residence"
+                  >
+                    Capital Hill Residence
+                  </a>
+                </h3>
+                <p class="property-card__location">East London</p>
+                <p class="property-card__price">$5527.00</p>
+              </article>
             </li>
 
             <li class="properties__card property-card">
-              <img
-                src="./img/home2.jpg"
-                alt="Picket Fence Realty"
-                class="property-card__image"
-              />
-              <h3 class="property-card__title">Picket Fence Realty</h3>
-              <p class="property-card__location">East London</p>
-              <p class="property-card__price">$6727.00</p>
-              <a
-                href="#"
-                class="property-card__link"
-              >
-                View Details
-              </a>
+              <article>
+                <img
+                  src="./img/home2.jpg"
+                  alt="Exterior view of Picket Fence Realty"
+                  class="property-card__image"
+                  width="300"
+                  height="200"
+                  loading="lazy"
+                />
+                <h3 class="property-card__title">
+                  <a
+                    href="#"
+                    class="property-card__link"
+                    aria-label="View Details for Picket Fence Realty"
+                  >
+                    Picket Fence Realty
+                  </a>
+                </h3>
+                <p class="property-card__location">East London</p>
+                <p class="property-card__price">$6727.00</p>
+              </article>
             </li>
 
             <li class="properties__card property-card">
-              <img
-                src="./img/home3.jpg"
-                alt="Banyon Tree Realty"
-                class="property-card__image"
-              />
-              <h3 class="property-card__title">Banyon Tree Realty</h3>
-              <p class="property-card__location">East London</p>
-              <p class="property-card__price">$4327.00</p>
-              <a
-                href="#"
-                class="property-card__link"
-              >
-                View Details
-              </a>
+              <article>
+                <img
+                  src="./img/home3.jpg"
+                  alt="Exterior view of Banyon Tree Realty"
+                  class="property-card__image"
+                  width="300"
+                  height="200"
+                  loading="lazy"
+                />
+                <h3 class="property-card__title">
+                  <a
+                    href="#"
+                    class="property-card__link"
+                    aria-label="View Details for Banyon Tree Realty"
+                  >
+                    Banyon Tree Realty
+                  </a>
+                </h3>
+                <p class="property-card__location">East London</p>
+                <p class="property-card__price">$4327.00</p>
+              </article>
             </li>
 
             <li class="properties__card property-card">
-              <img
-                src="./img/home4.jpg"
-                alt="Corsair Real Estate"
-                class="property-card__image"
-              />
-              <h3 class="property-card__title">Corsair Real Estate</h3>
-              <p class="property-card__location">East London</p>
-              <p class="property-card__price">$4427.00</p>
-              <a
-                href="#"
-                class="property-card__link"
-              >
-                View Details
-              </a>
+              <article>
+                <img
+                  src="./img/home4.jpg"
+                  alt="Exterior view of Corsair Real Estate"
+                  class="property-card__image"
+                  width="300"
+                  height="200"
+                  loading="lazy"
+                />
+                <h3 class="property-card__title">
+                  <a
+                    href="#"
+                    class="property-card__link"
+                    aria-label="View Details for Corsair Real Estate"
+                  >
+                    Corsair Real Estate
+                  </a>
+                </h3>
+                <p class="property-card__location">East London</p>
+                <p class="property-card__price">$4427.00</p>
+              </article>
             </li>
 
             <li class="properties__card property-card">
-              <img
-                src="./img/home5.jpg"
-                alt="Sequoia Real Estate"
-                class="property-card__image"
-              />
-              <h3 class="property-card__title">Sequoia Real Estate</h3>
-              <p class="property-card__location">East London</p>
-              <p class="property-card__price">$4527.00</p>
-              <a
-                href="#"
-                class="property-card__link"
-              >
-                View Details
-              </a>
+              <article>
+                <img
+                  src="./img/home5.jpg"
+                  alt="Exterior view of Sequoia Real Estate"
+                  class="property-card__image"
+                  width="300"
+                  height="200"
+                  loading="lazy"
+                />
+                <h3 class="property-card__title">
+                  <a
+                    href="#"
+                    class="property-card__link"
+                    aria-label="View Details for Sequoia Real Estate"
+                  >
+                    Sequoia Real Estate
+                  </a>
+                </h3>
+                <p class="property-card__location">East London</p>
+                <p class="property-card__price">$4527.00</p>
+              </article>
             </li>
 
             <li class="properties__card property-card">
-              <img
-                src="./img/home6.jpg"
-                alt="Strive Partners Realty"
-                class="property-card__image"
-              />
-              <h3 class="property-card__title">Strive Partners Realty</h3>
-              <p class="property-card__location">East London</p>
-              <p class="property-card__price">$5527.00</p>
-              <a
-                href="#"
-                class="property-card__link"
-              >
-                View Details
-              </a>
+              <article>
+                <img
+                  src="./img/home6.jpg"
+                  alt="Exterior view of Strive Partners Realty"
+                  class="property-card__image"
+                  width="300"
+                  height="200"
+                  loading="lazy"
+                />
+                <h3 class="property-card__title">
+                  <a
+                    href="#"
+                    class="property-card__link"
+                    aria-label="View Details for Strive Partners Realty"
+                  >
+                    Strive Partners Realty
+                  </a>
+                </h3>
+                <p class="property-card__location">East London</p>
+                <p class="property-card__price">$5527.00</p>
+              </article>
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- Featured Properties Section -->
       <section
         class="featured-properties"
         aria-labelledby="featured-properties__heading"
@@ -351,72 +424,127 @@
               Property Featured
             </h2>
             <p class="featured-properties__description">
-              Real estate is a crowded field. But with the number of buyers purchasing homes through real estate agents
-              and brokers growing, there’s plenty of
+              Real estate is a crowded field. But with the number of buyers
+              purchasing homes through real estate agents and brokers growing,
+              there’s plenty of
             </p>
           </header>
 
           <div class="featured-properties__content">
-            <!-- Property Features List -->
             <ul class="featured-properties__features">
               <li class="featured-properties__feature">
-                <span class="featured-properties__icon">🔒</span>
-                <h3 class="featured-properties__feature-title">100% Security</h3>
+                <span
+                  class="featured-properties__icon"
+                  role="img"
+                  aria-label="Security icon"
+                >
+                  🔒
+                </span>
+                <h3 class="featured-properties__feature-title">
+                  100% Security
+                </h3>
                 <p class="featured-properties__feature-description">
-                  For many of us, buying a home is a dream and one not easily attainable.
+                  For many of us, buying a home is a dream and one not easily
+                  attainable.
                 </p>
               </li>
               <li class="featured-properties__feature">
-                <span class="featured-properties__icon">❄️</span>
-                <h3 class="featured-properties__feature-title">Free air conditioner</h3>
+                <span
+                  class="featured-properties__icon"
+                  role="img"
+                  aria-label="Air conditioner icon"
+                >
+                  ❄️
+                </span>
+                <h3 class="featured-properties__feature-title">
+                  Free air conditioner
+                </h3>
                 <p class="featured-properties__feature-description">
-                  For many of us, buying a home is a dream and one not easily attainable.
+                  For many of us, buying a home is a dream and one not easily
+                  attainable.
                 </p>
               </li>
               <li class="featured-properties__feature">
-                <span class="featured-properties__icon">🌸</span>
-                <h3 class="featured-properties__feature-title">Flower garden</h3>
+                <span
+                  class="featured-properties__icon"
+                  role="img"
+                  aria-label="Flower icon"
+                >
+                  🌸
+                </span>
+                <h3 class="featured-properties__feature-title">
+                  Flower garden
+                </h3>
                 <p class="featured-properties__feature-description">
-                  For many of us, buying a home is a dream and one not easily attainable.
+                  For many of us, buying a home is a dream and one not easily
+                  attainable.
                 </p>
               </li>
               <li class="featured-properties__feature">
-                <span class="featured-properties__icon">🚗</span>
-                <h3 class="featured-properties__feature-title">Parkers & movers</h3>
+                <span
+                  class="featured-properties__icon"
+                  role="img"
+                  aria-label="Parking icon"
+                >
+                  🚗
+                </span>
+                <h3 class="featured-properties__feature-title">
+                  Parkers & movers
+                </h3>
                 <p class="featured-properties__feature-description">
-                  For many of us, buying a home is a dream and one not easily attainable.
+                  For many of us, buying a home is a dream and one not easily
+                  attainable.
                 </p>
               </li>
               <li class="featured-properties__feature">
-                <span class="featured-properties__icon">🛋️</span>
-                <h3 class="featured-properties__feature-title">Rental furniture</h3>
+                <span
+                  class="featured-properties__icon"
+                  role="img"
+                  aria-label="Furniture icon"
+                >
+                  🛋️
+                </span>
+                <h3 class="featured-properties__feature-title">
+                  Rental furniture
+                </h3>
                 <p class="featured-properties__feature-description">
-                  For many of us, buying a home is a dream and one not easily attainable.
+                  For many of us, buying a home is a dream and one not easily
+                  attainable.
                 </p>
               </li>
               <li class="featured-properties__feature">
-                <span class="featured-properties__icon">🏊‍♂️</span>
-                <h3 class="featured-properties__feature-title">Swimming pool</h3>
+                <span
+                  class="featured-properties__icon"
+                  role="img"
+                  aria-label="Swimming pool icon"
+                >
+                  🏊‍♂️
+                </span>
+                <h3 class="featured-properties__feature-title">
+                  Swimming pool
+                </h3>
                 <p class="featured-properties__feature-description">
-                  For many of us, buying a home is a dream and one not easily attainable.
+                  For many of us, buying a home is a dream and one not easily
+                  attainable.
                 </p>
               </li>
             </ul>
 
-            <!-- Featured Property Image -->
             <figure class="featured-properties__image-wrapper">
               <img
                 src="./img/building.jpg"
                 srcset="./img/building-2x.jpg 2x, ./img/building-3x.jpg 3x"
-                alt="Featured Property"
+                alt="Interior view of a modern featured property living room"
                 class="featured-properties__image"
+                width="500"
+                height="600"
+                loading="lazy"
               />
             </figure>
           </div>
         </div>
       </section>
 
-      <!-- Customer Reviews Section -->
       <section
         class="customer-reviews"
         aria-labelledby="customer-reviews__heading"
@@ -436,17 +564,26 @@
               <figure class="customer-review__profile">
                 <img
                   src="./img/foto1.jpg"
-                  alt="Justin Lee"
+                  alt="Photo of Justin Lee"
                   class="customer-review__image"
+                  width="80"
+                  height="80"
+                  loading="lazy"
                 />
                 <figcaption class="customer-review__author">
                   <h3 class="customer-review__name">Justin Lee</h3>
-                  <p class="customer-review__position">Products Designer at Ito</p>
+                  <p class="customer-review__position">
+                    Products Designer at Ito
+                  </p>
                 </figcaption>
               </figure>
               <blockquote class="customer-review__text">
-                "A good real estate agent doesn’t disappear once the closing is signed. Buying a bigger home doesn’t
-                necessarily mean spending more money. Been there, done that, sold, bought, bringing it all together."
+                <p>
+                  “A good real estate agent doesn’t disappear once the closing
+                  is signed. Buying a bigger home doesn’t necessarily mean
+                  spending more money. Been there, done that, sold, bought,
+                  bringing it all together.”
+                </p>
               </blockquote>
             </li>
 
@@ -454,24 +591,32 @@
               <figure class="customer-review__profile">
                 <img
                   src="./img/foto2.jpg"
-                  alt="Angel Cathe"
+                  alt="Photo of Angel Cathe"
                   class="customer-review__image"
+                  width="80"
+                  height="80"
+                  loading="lazy"
                 />
                 <figcaption class="customer-review__author">
                   <h3 class="customer-review__name">Angel Cathe</h3>
-                  <p class="customer-review__position">Products Designer at Ito</p>
+                  <p class="customer-review__position">
+                    Products Designer at Ito
+                  </p>
                 </figcaption>
               </figure>
               <blockquote class="customer-review__text">
-                "A great real estate agent doesn’t disappear once the closing is signed. Buying a bigger home doesn’t
-                necessarily mean spending more money. Been there, done that, sold, bought, bringing it all together."
-              </blockquote>
+                <p>
+                  “A great real estate agent doesn’t disappear once the closing
+                  is signed. Buying a bigger home doesn’t necessarily mean
+                  spending more money. Been there, done that, sold, bought,
+                  bringing it all together.”
+                </p>
+              </div>
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- Subscribe Section -->
       <section
         class="subscribe"
         aria-labelledby="subscribe__heading"
@@ -484,26 +629,29 @@
             Get listed your home as an owner
           </h2>
           <p class="subscribe__description">
-            Here is a list of the greatest real estate company slogans of all-time. These catchy slogans are followed by
-            the Greatest Real Estate.
+            Here is a list of the greatest real estate company slogans of
+            all-time. These catchy slogans are followed by the Greatest Real
+            Estate.
           </p>
           <form
             class="subscribe__form"
-            action="#"
+            action="/subscribe"
             method="POST"
           >
             <label
-              for="email"
+              for="subscribe-email"
               class="sr-only"
             >
               Enter email address
             </label>
             <input
               type="email"
-              id="email"
+              id="subscribe-email"
               name="email"
               placeholder="Enter email address"
               class="subscribe__input"
+              required
+              autocomplete="email"
             />
             <button
               type="submit"
@@ -516,84 +664,116 @@
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer
-      class="footer"
-      role="contentinfo"
-    >
+    <footer class="footer">
       <div class="container">
-        <!-- Logo and Description -->
-        <section class="footer__logo-section">
+        <div class="footer__intro">
           <a
             href="/"
-            class="header__logo"
-            aria-label="Home"
+            class="footer__logo"
+            aria-label="RentalSite Home"
           >
             <img
               src="./img/logo.png"
               srcset="./img/logo-2x.png 2x, ./img/logo-3x.png 3x"
-              alt="Company Logo"
+              alt="RentalSite Logo"
               class="logo__image"
+              width="100"
+              height="50"
+              loading="lazy"
             />
           </a>
-          <p class="footer__text">Contrary to popular is not simply random text. It has</p>
-          <!-- Social Media Links in Footer -->
-          <h2
-            id="footer__social-heading"
-            class="visually-hidden"
-          >
-            Follow us on social media
-          </h2>
-          <a
-            href="#"
-            class="footer__social-link"
-            aria-label="Facebook"
-          >
-            <svg class="footer__social-icon">
-              <use href="./img/sprite.svg#icon-facebook"></use>
-            </svg>
-          </a>
-          <a
-            href="#"
-            class="footer__social-link"
-            aria-label="Instagram"
-          >
-            <svg class="footer__social-icon">
-              <use href="./img/sprite.svg#icon-instagram"></use>
-            </svg>
-          </a>
-          <a
-            href="#"
-            class="footer__social-link"
-            aria-label="LinkedIn"
-          >
-            <svg class="footer__social-icon">
-              <use href="./img/sprite.svg#icon-linkedin"></use>
-            </svg>
-          </a>
-          <a
-            href="#"
-            class="footer__social-link"
-            aria-label="Twitter"
-          >
-            <svg class="footer__social-icon">
-              <use href="./img/sprite.svg#icon-twitter"></use>
-            </svg>
-          </a>
-          <a
-            href="#"
-            class="footer__social-link"
-            aria-label="YouTube"
-          >
-            <svg class="footer__social-icon">
-              <use href="./img/sprite.svg#icon-youtube"></use>
-            </svg>
-          </a>
-        </section>
+          <p class="footer__text">
+            Contrary to popular is not simply random text. It has
+          </p>
+          <div class="footer__social">
+            <h3
+              id="footer__social-heading"
+              class="visually-hidden"
+            >
+              Follow us on social media
+            </h3>
+            <a
+              href="#"
+              class="footer__social-link"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="footer__social-icon"
+                focusable="false"
+                aria-hidden="true"
+              >
+                <use href="./img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="footer__social-link"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="footer__social-icon"
+                focusable="false"
+                aria-hidden="true"
+              >
+                <use href="./img/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="footer__social-link"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="footer__social-icon"
+                focusable="false"
+                aria-hidden="true"
+              >
+                <use href="./img/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="footer__social-link"
+              aria-label="Twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="footer__social-icon"
+                focusable="false"
+                aria-hidden="true"
+              >
+                <use href="./img/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="footer__social-link"
+              aria-label="YouTube"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="footer__social-icon"
+                focusable="false"
+                aria-hidden="true"
+              >
+                <use href="./img/sprite.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
 
-        <!-- Footer Links -->
-        <section class="footer__columns">
-          <!-- About Section -->
+        <nav
+          class="footer__columns"
+          aria-label="Footer navigation"
+        >
           <div class="footer__column">
             <h3 class="footer__title">About</h3>
             <ul class="footer__list">
@@ -632,7 +812,6 @@
             </ul>
           </div>
 
-          <!-- Products Section -->
           <div class="footer__column">
             <h3 class="footer__title">Products</h3>
             <ul class="footer__list">
@@ -671,7 +850,6 @@
             </ul>
           </div>
 
-          <!-- Address Section -->
           <div class="footer__column">
             <h3 class="footer__title">Address</h3>
             <address class="footer__address">
@@ -679,18 +857,39 @@
               <p class="footer__address-item">Counter Beach Post</p>
               <p class="footer__address-item">
                 <a
-                  href="http://www.itobd.com"
+                  href="https://www.itobd.com"
                   class="footer__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   www.itobd.com
                 </a>
               </p>
-              <p class="footer__address-item">+880176565655</p>
+              <p class="footer__address-item">
+                <a
+                  href="tel:+880176565655"
+                  class="footer__link"
+                >
+                  +880176565655
+                </a>
+              </p>
             </address>
           </div>
-        </section>
+        </nav>
+        <div class="footer__copyright">
+          <p>
+            &copy;
+            <span id="current-year"></span>
+            RentalSite. All rights reserved.
+          </p>
+          <script>
+            document.getElementById('current-year').textContent =
+              new Date().getFullYear();
+          </script>
+        </div>
       </div>
     </footer>
+
     <script
       src="./js/script.js"
       type="module"

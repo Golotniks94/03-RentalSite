@@ -1,19 +1,21 @@
 .modal {
-  display: none;
   position: fixed;
-  z-index: 1;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 250ms ease;
+  visibility: hidden;
   opacity: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 250ms ease, visibility 250ms ease;
+  z-index: 1000;
+  overflow-y: auto;
 
   &.show {
-    display: block;
+    visibility: visible;
     opacity: 1;
+    display: block;
   }
 
   &.hide {
@@ -26,24 +28,30 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    animation: slide-down 250ms ease-out;
+    max-width: 600px;
+    border-radius: 5px;
+    position: relative;
+    animation: slide-down 250ms ease-out forwards;
 
     &.hide {
-      animation: slide-up 250ms ease-out;
+      animation: slide-up 250ms ease-out forwards;
     }
   }
 
   .close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
     color: #aaa;
-    float: right;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
 
     &:hover,
     &:focus {
-      color: black;
+      color: #000;
       text-decoration: none;
-      cursor: pointer;
     }
   }
 }

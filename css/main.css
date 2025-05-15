@@ -1,9 +1,10 @@
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", system-ui, Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: #222;
   line-height: 1.6;
   background-color: #f8f8f8;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -26,65 +27,97 @@ p {
 a {
   font-weight: 500;
   color: #ff5a5f;
-}
-a:hover {
-  color: #ff272e;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-/* Minimalistic Reset SCSS */
+a:hover {
+  color: #e05055;
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid #ff5a5f;
+  outline-offset: 2px;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+figcaption,
+pre,
+ul,
+ol,
+dl,
+dd {
   margin: 0;
-  padding: 0;
-}
-
-html {
-  line-height: 1.5;
-  -webkit-text-size-adjust: 100%;
-  scroll-behavior: smooth;
-}
-
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  -webkit-font-smoothing: antialiased;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-button,
-input,
-select,
-textarea {
-  font: inherit;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 ul,
 ol {
+  padding: 0;
   list-style: none;
 }
 
-table {
-  border-collapse: collapse;
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 [hidden] {
   display: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -126,21 +159,23 @@ table {
 }
 
 .modal {
-  display: none;
   position: fixed;
-  z-index: 1;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 0.25s ease;
+  visibility: hidden;
   opacity: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 250ms ease, visibility 250ms ease;
+  z-index: 1000;
+  overflow-y: auto;
 }
 .modal.show {
-  display: block;
+  visibility: visible;
   opacity: 1;
+  display: block;
 }
 .modal.hide {
   opacity: 0;
@@ -151,21 +186,27 @@ table {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  animation: slide-down 0.25s ease-out;
+  max-width: 600px;
+  border-radius: 5px;
+  position: relative;
+  animation: slide-down 250ms ease-out forwards;
 }
 .modal .modal-content.hide {
-  animation: slide-up 0.25s ease-out;
+  animation: slide-up 250ms ease-out forwards;
 }
 .modal .close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
   color: #aaa;
-  float: right;
   font-size: 28px;
   font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 .modal .close-button:hover, .modal .close-button:focus {
-  color: black;
+  color: #000;
   text-decoration: none;
-  cursor: pointer;
 }
 
 @keyframes slide-down {
