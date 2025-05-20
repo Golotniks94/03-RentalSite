@@ -1,5 +1,5 @@
 body {
-  font-family: "Poppins", system-ui, Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', system-ui, Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: #222;
   line-height: 1.6;
@@ -128,7 +128,7 @@ th {
   }
 }
 .button {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   padding: 8px 16px;
   border-radius: 8px;
@@ -204,7 +204,8 @@ th {
   cursor: pointer;
   transition: color 0.3s ease;
 }
-.modal .close-button:hover, .modal .close-button:focus {
+.modal .close-button:hover,
+.modal .close-button:focus {
   color: #000;
   text-decoration: none;
 }
@@ -348,4 +349,4 @@ th {
 .partners__logos__logo-item img:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
