@@ -1,48 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('contact-us-modal');
   const openModalBtn = document.getElementById('contact-us-link');
+  const closeModalBtn = modal?.querySelector('.close-button');
 
   if (!modal || !openModalBtn) return;
 
-  const closeModalBtn = modal.querySelector('.close-button');
+  const showModal = () => {
+    modal.classList.add('show');
+    modal.classList.remove('hide');
+    modal.setAttribute('aria-hidden', 'false');
+  };
 
-  const toggleModal = (show) => {
-    modal.classList.toggle('show', show);
-    if (show) {
-      modal.classList.remove('hide');
-    } else {
-      modal.classList.add('hide');
-      setTimeout(() => {
-        modal.classList.remove('show', 'hide');
-      }, 250);
-    }
-    modal.setAttribute('aria-hidden', !show);
+  const hideModal = () => {
+    modal.classList.add('hide');
+    modal.setAttribute('aria-hidden', 'true');
+    setTimeout(() => modal.classList.remove('show', 'hide'), 250);
   };
 
   openModalBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    toggleModal(true);
+    showModal();
   });
 
-  if (closeModalBtn) {
-    closeModalBtn.addEventListener('click', () => toggleModal(false));
-  }
+  closeModalBtn?.addEventListener('click', hideModal);
 
   window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      toggleModal(false);
-    }
+    if (e.target === modal) hideModal();
   });
 
   window.addEventListener('keydown', (e) => {
     if (
       modal.classList.contains('show') &&
-      (e.key === 'Escape' || e.keyCode === 27)
+      (e.key === 'Escape' || e.key === 'Esc')
     ) {
-      toggleModal(false);
+      hideModal();
     }
   });
 
   modal.classList.add('hide');
-  modal.setAttribute('aria-hidden', true);
+  modal.setAttribute('aria-hidden', 'true');
 });
